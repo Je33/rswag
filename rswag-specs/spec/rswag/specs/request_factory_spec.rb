@@ -9,7 +9,7 @@ module Rswag
       before do
         allow(config).to receive(:get_swagger_doc).and_return(swagger_doc)
       end
-      let(:config) { double('config') } 
+      let(:config) { double('config') }
       let(:swagger_doc) { {} }
       let(:example) { double('example') }
       let(:metadata) do
@@ -124,6 +124,34 @@ module Rswag
           it 'builds request hash without them' do
             expect(request[:path]).to eq('/blogs')
             expect(request[:headers]).to eq({})
+          end
+        end
+
+        context 'optional parameter named include' do
+          context 'not included' do
+            before do
+              metadata[:operation][:parameters] = [
+                { name: 'include', in: :query, type: :string, required: false }
+              ]
+              allow(example).to receive(:include).and_return(RSpec::Matchers::BuiltIn::Include.new)
+            end
+
+            it 'builds request hash without them' do
+              expect(request[:path]).to eq('/blogs')
+            end
+          end
+
+          context 'included' do
+            before do
+              metadata[:operation][:parameters] = [
+                { name: 'include', in: :query, type: :string, required: false }
+              ]
+              allow(example).to receive(:include).and_return('foo')
+            end
+
+            it 'builds request hash without them' do
+              expect(request[:path]).to eq('/blogs?include=foo')
+            end
           end
         end
 
