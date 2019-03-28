@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rswag"
+  s.name        = "rswag3"
   s.version     = ENV['TRAVIS_TAG'] || '0.0.0'
   s.authors     = ["Richie Morris"]
   s.email       = ["domaindrivendev@gmail.com"]
