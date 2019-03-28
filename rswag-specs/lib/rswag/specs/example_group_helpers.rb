@@ -35,6 +35,10 @@ module Rswag
         end
       end
 
+      def requestBody(value)
+        metadata[:operation][:requestBody] = value
+      end
+
       def parameter(attributes)
         if attributes[:in] && attributes[:in].to_sym == :path
           attributes[:required] = true
