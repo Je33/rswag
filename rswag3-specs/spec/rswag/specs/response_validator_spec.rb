@@ -1,6 +1,6 @@
-require 'rswag/specs/response_validator'
+require 'rswag3/specs/response_validator'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe ResponseValidator do

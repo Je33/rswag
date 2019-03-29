@@ -1,7 +1,7 @@
-require 'rswag/specs/swagger_formatter'
+require 'rswag3/specs/swagger_formatter'
 require 'ostruct'
 
-module Rswag
+module Rswag3
   module Specs
     
     describe SwaggerFormatter do

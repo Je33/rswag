@@ -1,6 +1,6 @@
-require 'rswag/specs/configuration'
+require 'rswag3/specs/configuration'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe Configuration do

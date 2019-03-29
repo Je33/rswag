@@ -1,6 +1,6 @@
-require 'rswag/specs/example_helpers'
+require 'rswag3/specs/example_helpers'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe ExampleHelpers do
@@ -8,7 +8,7 @@ module Rswag
 
       before do
         subject.extend(ExampleHelpers)
-        allow(Rswag::Specs).to receive(:config).and_return(config)
+        allow(Rswag3::Specs).to receive(:config).and_return(config)
         allow(config).to receive(:get_swagger_doc).and_return(swagger_doc)
         stub_const('Rswag::Specs::RAILS_VERSION', 3)
       end

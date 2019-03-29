@@ -1,6 +1,6 @@
-require 'rswag/specs/example_group_helpers'
+require 'rswag3/specs/example_group_helpers'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe ExampleGroupHelpers do

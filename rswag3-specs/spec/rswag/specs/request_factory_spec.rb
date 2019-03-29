@@ -1,6 +1,6 @@
-require 'rswag/specs/request_factory'
+require 'rswag3/specs/request_factory'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe RequestFactory do

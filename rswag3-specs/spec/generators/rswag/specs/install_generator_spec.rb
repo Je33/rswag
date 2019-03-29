@@ -1,7 +1,7 @@
 require 'generator_spec'
-require 'generators/rswag/specs/install/install_generator'
+require 'generators/rswag3/specs/install/install_generator'
 
-module Rswag
+module Rswag3
   module Specs
 
     describe InstallGenerator do

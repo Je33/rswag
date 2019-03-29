@@ -15,8 +15,8 @@ end
 
 gem 'sqlite3'
 
-gem 'rswag-api', path: './rswag-api'
-gem 'rswag-ui', path: './rswag-ui'
+gem 'rswag3-api', path: './rswag3-api'
+gem 'rswag3-ui', path: './rswag3-ui'
 
 group :test do
   gem 'test-unit'
@@ -24,7 +24,7 @@ group :test do
   gem 'generator_spec'
   gem 'capybara'
   gem 'capybara-webkit'
-  gem 'rswag-specs', path: './rswag-specs'
+  gem 'rswag3-specs', path: './rswag3-specs'
 end
 
 group :assets do
