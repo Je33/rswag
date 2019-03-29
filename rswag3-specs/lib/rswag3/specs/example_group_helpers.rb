@@ -62,6 +62,10 @@ module Rswag3
         metadata[:response][:schema] = value
       end
 
+      def content(value)
+        metadata[:response][:content] = value
+      end
+
       def header(name, attributes)
         metadata[:response][:headers] ||= {}
         metadata[:response][:headers][name] = attributes
